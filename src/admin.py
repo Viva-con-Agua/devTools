@@ -20,7 +20,7 @@ class Admin:
             return None
         roles = str(current_roles[0]).split(",")
         if role in roles:
-            print("user" + email +"actually have the role " + role + "\n")
+            print("user " + email +"actually have the role " + role + "\n")
             return None
         new_roles = str(current_roles[0]) + "," + role
         update = self.drops_dao.update_user_role_by_id(user_id[0], new_roles)
