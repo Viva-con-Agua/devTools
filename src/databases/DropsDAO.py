@@ -35,7 +35,7 @@ class DropsDAO:
         self.cursor.execute("SELECT u.id FROM User u INNER JOIN Profile p ON (u.id = p.user_id)  WHERE p.email=%s", (email,))
         result = self.cursor.fetchone()
         if result is None:
-            print("Can´t find user with given email \n")
+            print("Can´t find user with given email " + email + "\n")
         return result
     
     def select_user_role_by_id(self, user_id):
